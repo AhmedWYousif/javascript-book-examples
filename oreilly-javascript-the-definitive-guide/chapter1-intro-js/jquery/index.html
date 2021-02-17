@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="hide.js"></script>
+</head>
+
+<body>
+    <p>This is a paragraph of HTML</p>
+    <button onclick="hide(this,true); debug('hide button 1');">Hide1</button>
+    <button onclick="hide(this); debug('hide button 2');">Hide2</button>
+    <script>
+        function debug(msg)
+        {
+            var log = $("#debuglog"); // Find the element to display msg in.
+            if (log.length == 0) { // If it doesn't exist yet, create it...
+                log = $("<div id='debuglog'><h1>Debug Log</h1></div>");
+                log.appendTo(document.body); // and insert it at the end of the body.
+            }
+            log.append($("<pre/>").text(msg)); // Wrap msg in <pre> and append to log.
+        }
+    </script>
+    <p>Here is more HTML.</p>
+</body>
+
+</html>
