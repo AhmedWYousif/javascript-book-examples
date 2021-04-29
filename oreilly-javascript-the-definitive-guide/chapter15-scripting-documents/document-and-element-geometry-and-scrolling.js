@@ -45,7 +45,6 @@ var x = box.left + offsets.x; // Convert to document coordinates
 var y = box.top + offsets.y;
 
 // the object returned by getBoundingClientRect() also has width and height properties, but the original IE implementation does not do this.
-
 var box = e.getBoundingClientRect();
 var w = box.width || box.right - box.left;
 var h = box.height || box.bottom - box.top;
